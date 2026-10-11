@@ -22,6 +22,11 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: basePath,
+  // Expose the computed basePath to client code (withBase helper).
+  // On GitHub Actions this is '/repo-name', locally it is ''.
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   trailingSlash: true,
   reactStrictMode: true,
 };

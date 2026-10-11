@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import styles from './Avatar3DViewer.module.css';
+import { withBase } from '../lib/withBase';
 
 export default function Avatar3DViewer({ avatarUrl }) {
   const containerRef = useRef(null);
@@ -278,7 +279,7 @@ export default function Avatar3DViewer({ avatarUrl }) {
       },
       undefined,
       () => {
-        loader.load('/avatar.png', (fallback) => {
+        loader.load(withBase('/avatar.png'), (fallback) => {
           fallback.colorSpace = THREE.SRGBColorSpace;
           applyTexture(fallback);
         });

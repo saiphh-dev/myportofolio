@@ -1,6 +1,7 @@
 'use client';
 
 import styles from './ShowcaseSection.module.css';
+import { withBase } from '../lib/withBase';
 
 export default function ShowcaseSection({ parts, onSelectImage }) {
   return (
@@ -50,7 +51,7 @@ export default function ShowcaseSection({ parts, onSelectImage }) {
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={part.image}
+                    src={withBase(part.image)}
                     alt={part.imageAlt}
                     className={styles.buildImage}
                     loading="lazy"

@@ -1,6 +1,7 @@
 'use client';
 
 import styles from './LightboxModal.module.css';
+import { withBase } from '../lib/withBase';
 
 export default function LightboxModal({ isOpen, image, title, alt, onClose }) {
   if (!isOpen || !image) return null;
@@ -19,7 +20,7 @@ export default function LightboxModal({ isOpen, image, title, alt, onClose }) {
 
         <div className={styles.imageFrame}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={image} alt={alt || title} className={styles.fullImage} />
+          <img src={withBase(image)} alt={alt || title} className={styles.fullImage} />
         </div>
 
         <div className={styles.captionBar}>
@@ -28,7 +29,7 @@ export default function LightboxModal({ isOpen, image, title, alt, onClose }) {
             <span className={styles.captionTitle}>{title}</span>
           </div>
           <a
-            href={image}
+            href={withBase(image)}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.openOriginal}

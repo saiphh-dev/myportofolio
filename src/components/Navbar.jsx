@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
+import { withBase } from '../lib/withBase';
 
 export default function Navbar({ onOpenAvatarModal, avatarUrl }) {
   const [scrolled, setScrolled] = useState(false);
@@ -23,11 +24,11 @@ export default function Navbar({ onOpenAvatarModal, avatarUrl }) {
           <div className={styles.brandAvatarRing}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={avatarUrl || '/avatar.png'}
+              src={withBase(avatarUrl) || withBase('/avatar.png')}
               alt="Saiphh Logo"
               className={styles.brandAvatar}
               onError={(e) => {
-                e.currentTarget.src = '/avatar.png';
+                e.currentTarget.src = withBase('/avatar.png');
               }}
             />
           </div>

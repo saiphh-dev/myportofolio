@@ -1,6 +1,7 @@
 'use client';
 
 import styles from './ShowcaseCarousel.module.css';
+import { withBase } from '../lib/withBase';
 
 export default function ShowcaseCarousel({ images = [], onSelectImage }) {
   if (!images || images.length === 0) return null;
@@ -39,7 +40,7 @@ export default function ShowcaseCarousel({ images = [], onSelectImage }) {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={item.src}
+                  src={withBase(item.src)}
                   alt={item.alt || item.title}
                   className={styles.cardImage}
                   loading="lazy"
@@ -71,7 +72,7 @@ export default function ShowcaseCarousel({ images = [], onSelectImage }) {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={item.src}
+                  src={withBase(item.src)}
                   alt={item.alt || item.title}
                   className={styles.cardImage}
                   loading="lazy"
