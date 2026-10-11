@@ -1,0 +1,232 @@
+.contactSection {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem 1.5rem;
+}
+
+.ambientGlow {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 450px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.2) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.contactCard {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #c084fc;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.2rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.studDot {
+  color: #d946ef;
+}
+
+.title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+}
+
+.quoteMessage {
+  max-width: 680px;
+  margin: 0 auto 2.5rem auto;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.7;
+  color: #d8b4fe;
+  font-weight: 400;
+  font-style: italic;
+  padding: 0 1rem;
+}
+
+/* Small Clickable Brand Icons */
+.iconsRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.iconButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  /* Studs plate: dark plate face */
+  background: linear-gradient(180deg, #2d1260 0%, #1e0b38 60%, #160730 100%);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #e9d5ff;
+  text-decoration: none;
+  /* Raised plate depth */
+  box-shadow:
+    0 5px 0 0 #0d0420,
+    0 7px 14px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(168, 85, 247, 0.2);
+  position: relative;
+  top: 0;
+  transition: all 0.12s ease;
+}
+
+.iconGlyph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.iconButton:hover {
+  top: -2px;
+  border-color: #c084fc;
+  background: linear-gradient(180deg, #4a1fa0 0%, #2d1260 60%, #1e0b38 100%);
+  color: #ffffff;
+  box-shadow:
+    0 7px 0 0 #0d0420,
+    0 10px 22px rgba(168, 85, 247, 0.4),
+    inset 0 1px 0 rgba(192, 132, 252, 0.25);
+}
+
+.iconButton:hover .iconGlyph {
+  transform: scale(1.1);
+}
+
+.iconButton:active {
+  top: 4px;
+  box-shadow:
+    0 1px 0 0 #0d0420,
+    0 2px 5px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(168, 85, 247, 0.1);
+}
+
+.iconTooltip {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0d0519;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: #d8b4fe;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.iconButton:hover .iconTooltip {
+  opacity: 1;
+}
+
+.iconGlow {
+  display: none;
+}
+
+/* Discord Helper */
+.discordHelper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-top: 1rem;
+}
+
+.copyDiscordBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  /* Studs plate: Discord blue plate */
+  background: linear-gradient(180deg, #6875f5 0%, #5865f2 55%, #4752c4 100%);
+  border: 1px solid rgba(88, 101, 242, 0.5);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  /* Raised plate depth */
+  box-shadow:
+    0 5px 0 0 #3641a0,
+    0 8px 18px rgba(88, 101, 242, 0.35),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+  position: relative;
+  top: 0;
+  transition: all 0.12s ease;
+}
+
+.copyDiscordBtn:hover {
+  background: linear-gradient(180deg, #7c88ff 0%, #6875f5 55%, #5865f2 100%);
+  color: #ffffff;
+  border-color: #818cf8;
+  box-shadow:
+    0 6px 0 0 #3641a0,
+    0 10px 22px rgba(88, 101, 242, 0.5),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+  top: -1px;
+}
+
+.copyDiscordBtn:active {
+  top: 4px;
+  box-shadow:
+    0 1px 0 0 #3641a0,
+    0 2px 5px rgba(88, 101, 242, 0.3),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.discordTag {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #c084fc;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 640px) {
+  .contactCard {
+    padding: 1.5rem 0.5rem;
+  }
+  .iconButton {
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -1,0 +1,34 @@
+.coinWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 380px;
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  overflow: visible;
+}
+
+.coinWrapper:active {
+  cursor: grabbing;
+}
+
+.canvasContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+}
+
+@media (max-width: 640px) {
+  .coinWrapper {
+    max-width: 320px;
+    height: 320px;
+  }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+  <rect width="40" height="40" fill="#0a0414"/>
+  <!-- Stud circle -->
+  <circle cx="20" cy="20" r="8" fill="none" stroke="rgba(120,60,200,0.18)" stroke-width="1.5"/>
+  <circle cx="20" cy="20" r="5.5" fill="rgba(80,30,150,0.10)"/>
+  <!-- Top highlight on stud -->
+  <ellipse cx="18" cy="16.5" rx="2.5" ry="1.5" fill="rgba(200,160,255,0.07)"/>
+</svg>

@@ -1,0 +1,82 @@
+:root {
+  --bg-dark: #07030e;
+  --bg-card: rgba(22, 9, 44, 0.65);
+  --bg-card-hover: rgba(36, 15, 68, 0.75);
+  
+  --primary: #9333ea;
+  --primary-light: #c084fc;
+  --primary-neon: #d946ef;
+  --primary-dark: #4c1d95;
+  --primary-deep: #1e0b38;
+  
+  --text-main: #f5f3ff;
+  --text-muted: #c4b5fd;
+  --text-dim: #9987bb;
+  
+  --border-violet: rgba(168, 85, 247, 0.3);
+  --border-glow: rgba(192, 132, 252, 0.6);
+  
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'Space Grotesk', 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  /* Studs tile pattern over dark purple gradient */
+  background-image:
+    url('/studs-pattern.svg'),
+    radial-gradient(circle at 50% 0%, rgba(147, 51, 234, 0.22) 0%, transparent 55%),
+    radial-gradient(circle at 100% 80%, rgba(88, 28, 200, 0.12) 0%, transparent 40%);
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-size: 40px 40px, 100% 100%, 100% 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Sleek Dark-Purple Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080312;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b1768;
+  border-radius: 999px;
+  border: 2px solid #080312;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+  box-shadow: 0 0 10px #a855f7;
+}
+
+::selection {
+  background-color: #a855f7;
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
