@@ -39,7 +39,15 @@ export default function ShowcaseSection({ parts, onSelectImage }) {
               <div className={styles.imageColumn}>
                 <div
                   className={styles.imageFrame}
-                  onClick={() => onSelectImage(part.image, part.title, part.imageAlt)}
+                  onClick={(e) => {
+                    const r = e.currentTarget.getBoundingClientRect();
+                    onSelectImage(part.image, part.title, part.imageAlt, {
+                      left: r.left,
+                      top: r.top,
+                      width: r.width,
+                      height: r.height,
+                    });
+                  }}
                   role="button"
                   tabIndex={0}
                   aria-label={`Enlarge build image for ${part.title}`}

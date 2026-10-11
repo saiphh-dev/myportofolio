@@ -28,7 +28,15 @@ export default function ShowcaseCarousel({ images = [], onSelectImage }) {
               <div
                 key={`row1-${index}`}
                 className={styles.imageCard}
-                onClick={() => onSelectImage(item.src, item.title, item.alt)}
+                onClick={(e) => {
+                  const r = e.currentTarget.getBoundingClientRect();
+                  onSelectImage(item.src, item.title, item.alt, {
+                    left: r.left,
+                    top: r.top,
+                    width: r.width,
+                    height: r.height,
+                  });
+                }}
                 role="button"
                 tabIndex={0}
                 aria-label={`View ${item.title}`}
@@ -60,7 +68,15 @@ export default function ShowcaseCarousel({ images = [], onSelectImage }) {
               <div
                 key={`row2-${index}`}
                 className={styles.imageCard}
-                onClick={() => onSelectImage(item.src, item.title, item.alt)}
+                onClick={(e) => {
+                  const r = e.currentTarget.getBoundingClientRect();
+                  onSelectImage(item.src, item.title, item.alt, {
+                    left: r.left,
+                    top: r.top,
+                    width: r.width,
+                    height: r.height,
+                  });
+                }}
                 role="button"
                 tabIndex={0}
                 aria-label={`View ${item.title}`}

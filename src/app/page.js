@@ -16,6 +16,7 @@ export default function Home() {
     image: '',
     title: '',
     alt: '',
+    originRect: null,
   });
 
   // Load avatar if stored in localStorage
@@ -30,12 +31,13 @@ export default function Home() {
     }
   }, []);
 
-  const handleOpenLightbox = (image, title, alt) => {
+  const handleOpenLightbox = (image, title, alt, originRect = null) => {
     setLightboxState({
       isOpen: true,
       image,
       title,
       alt,
+      originRect,
     });
   };
 
@@ -45,6 +47,7 @@ export default function Home() {
       image: '',
       title: '',
       alt: '',
+      originRect: null,
     });
   };
 
@@ -79,6 +82,7 @@ export default function Home() {
         image={lightboxState.image}
         title={lightboxState.title}
         alt={lightboxState.alt}
+        originRect={lightboxState.originRect}
         onClose={handleCloseLightbox}
       />
     </main>
