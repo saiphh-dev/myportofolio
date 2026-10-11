@@ -82,7 +82,16 @@ export default function LightboxModal({ isOpen, image, title, alt, originRect, o
         <div className={styles.imageFrame}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={withBase(image)} alt={alt || title} className={styles.fullImage} />
-          <span className={styles.watermark}>Saiphh</span>
+          {/* Tiled anti-theft watermark, like stock-photo sites */}
+          <div className={styles.watermarkLayer} aria-hidden="true">
+            {Array.from({ length: 6 }).map((_, row) => (
+              <div key={row} className={styles.watermarkRow}>
+                {Array.from({ length: 8 }).map((_, col) => (
+                  <span key={col}>Saiphh</span>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className={styles.captionBar}>
