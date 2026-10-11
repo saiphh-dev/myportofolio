@@ -115,6 +115,9 @@ export default function ContactSection({ contactData }) {
             ))}
           </div>
 
+          {/* Discord username between socials and Discord button */}
+          <p className={styles.discordUser}>Discord User: Saiphh____</p>
+
           {/* Quick Discord Action */}
           <div className={styles.discordHelper}>
             <button
