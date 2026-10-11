@@ -82,6 +82,7 @@ export default function LightboxModal({ isOpen, image, title, alt, originRect, o
         <div className={styles.imageFrame}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={withBase(image)} alt={alt || title} className={styles.fullImage} />
+          <span className={styles.watermark}>Saiphh</span>
         </div>
 
         <div className={styles.captionBar}>
@@ -89,14 +90,6 @@ export default function LightboxModal({ isOpen, image, title, alt, originRect, o
             <span className={styles.dot}>❖</span>
             <span className={styles.captionTitle}>{title}</span>
           </div>
-          <a
-            href={withBase(image)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.openOriginal}
-          >
-            Open Full Res ↗
-          </a>
         </div>
       </div>
     </div>

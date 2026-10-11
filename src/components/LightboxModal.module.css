@@ -79,6 +79,7 @@
 }
 
 .imageFrame {
+  position: relative;
   width: 100%;
   max-height: 75vh;
   display: flex;
@@ -86,6 +87,24 @@
   justify-content: center;
   background: #080310;
   overflow: hidden;
+}
+
+.watermark {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  z-index: 5;
+  background: rgba(8, 3, 16, 0.65);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .fullImage {
@@ -117,16 +136,4 @@
   font-weight: 700;
   color: #ffffff;
   font-size: 1rem;
-}
-
-.openOriginal {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #c084fc;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.openOriginal:hover {
-  color: #ffffff;
 }
