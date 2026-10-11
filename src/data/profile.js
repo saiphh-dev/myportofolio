@@ -28,11 +28,13 @@ export const profileData = {
   // Gallery images for the 2-row infinite marquee carousel
   // Any image you add here will automatically appear in the carousel!
   galleryImages: [
-    { id: 1, src: "/showcase/part1_studs.jpg", title: "Studs-Style Architecture", alt: "Studs-Style Architecture" },
-    { id: 2, src: "/showcase/part2_env.jpg", title: "Detailed Fantasy Environments", alt: "Detailed Environments" },
-    { id: 3, src: "/showcase/part3_styles.jpg", title: "Futuristic & Sci-Fi Structures", alt: "Sci-Fi Architecture" },
-    { id: 4, src: "/showcase/part4_quality.jpg", title: "Intricate Cathedral & Pillars", alt: "Quality Architecture" },
-    { id: 5, src: "/showcase/part5_specialties.jpg", title: "Master Studio Builds Compilation", alt: "Master Studio Builds" },
+    { id: 1, src: "/showcase/lowpoly-simulator-spawn-structure.png", title: "LowPoly Simulator Spawn Structure", alt: "LowPoly Simulator Spawn Structure" },
+    { id: 2, src: "/showcase/lowpoly-spawn-for-arcade-car-game.png", title: "LowPoly Spawn For Arcade Car Game", alt: "LowPoly Spawn For Arcade Car Game" },
+    { id: 3, src: "/showcase/obby-map-structure-fully-decorated.png", title: "Obby Map Structure Fully Decorated", alt: "Obby Map Structure Fully Decorated" },
+    { id: 4, src: "/showcase/showcase-pads-for-vfx-gamepass.png", title: "ShowCase Pads for VFX-Gamepass", alt: "ShowCase Pads for VFX-Gamepass" },
+    { id: 5, src: "/showcase/stud-style-convert-stand.png", title: "Stud Style Convert Stand", alt: "Stud Style Convert Stand" },
+    { id: 6, src: "/showcase/stud-style-nature-background.png", title: "Stud Style Nature BackGround", alt: "Stud Style Nature BackGround" },
+    { id: 7, src: "/showcase/stud-style-teleport-desert-biome.png", title: "Stud Style Teleport Desert Biome", alt: "Stud Style Teleport Desert Biome" },
   ],
 
   // 5 Alternating Portfolio Parts (Right / Left layout)
@@ -44,8 +46,8 @@ export const profileData = {
       title: "Roblox Studio Builder & Studs-Style Specialist",
       // Text requested by user:
       content: "Hey! I'm a Roblox Studio Builder with over 5 years of building experience, specializing in **Studs-style builds** while being adaptable to a wide variety of building styles.",
-      image: "/showcase/part1_studs.jpg",
-      imageAlt: "Roblox Studio Studs-Style Architecture by Saiphh",
+      image: "/showcase/lowpoly-simulator-spawn-structure.png",
+      imageAlt: "LowPoly Simulator Spawn Structure",
       align: "right", // Text on Right, Image on Left
       stats: [
         { label: "Experience", value: "5+ Years" },
@@ -60,8 +62,8 @@ export const profileData = {
       title: "Detailed & Visually Appealing Environments",
       // Text requested by user:
       content: "I'm passionate about creating detailed, visually appealing environments and bringing ideas to life through creative building.",
-      image: "/showcase/part2_env.jpg",
-      imageAlt: "Detailed Fantasy and Atmospheric Roblox Scenery",
+      image: "/showcase/lowpoly-spawn-for-arcade-car-game.png",
+      imageAlt: "LowPoly Spawn For Arcade Car Game",
       align: "left", // Text on Left, Image on Right
       stats: [
         { label: "World Building", value: "Custom" },
@@ -76,8 +78,8 @@ export const profileData = {
       title: "Adaptability to Diverse Building Styles",
       // Text requested by user:
       content: "While Studs-style building is my main specialty, I'm comfortable adapting to different styles, themes, and project requirements to achieve the desired result.",
-      image: "/showcase/part3_styles.jpg",
-      imageAlt: "Futuristic & Sci-Fi Roblox Studio Structures",
+      image: "/showcase/obby-map-structure-fully-decorated.png",
+      imageAlt: "Obby Map Structure Fully Decorated",
       align: "right", // Text on Right, Image on Left
       stats: [
         { label: "Styles", value: "Versatile" },
@@ -92,8 +94,8 @@ export const profileData = {
       title: "Delivering Quality Builds & Client Vision",
       // Text requested by user:
       content: "I'm always focused on delivering quality builds, paying attention to detail, and making sure each project meets the client's vision.",
-      image: "/showcase/part4_quality.jpg",
-      imageAlt: "Intricate Roblox Studio Cathedral & Pillar Architecture",
+      image: "/showcase/showcase-pads-for-vfx-gamepass.png",
+      imageAlt: "ShowCase Pads for VFX-Gamepass",
       align: "left", // Text on Left, Image on Right
       stats: [
         { label: "Quality Focus", value: "100%" },
@@ -130,8 +132,8 @@ export const profileData = {
           desc: "Transparent communication, regular visual progress updates, and builds aligned strictly with your design doc."
         }
       ],
-      image: "/showcase/part5_specialties.jpg",
-      imageAlt: "Compilation of Saiphh's Roblox Studio Master Builds",
+      image: "/showcase/stud-style-convert-stand.png",
+      imageAlt: "Stud Style Convert Stand",
       align: "right", // Text on Right, Image on Left
       stats: [
         { label: "Specialities", value: "5 Pillars" },
