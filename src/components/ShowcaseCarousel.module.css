@@ -61,6 +61,8 @@
   overflow: hidden;
   width: 100%;
   display: flex;
+  /* Spazio verticale così la card in hover (sollevata/zoomata) non viene tagliata sopra */
+  padding: 10px 0;
 }
 
 .marqueeTrack {
@@ -131,6 +133,9 @@
     0 14px 35px rgba(147, 51, 234, 0.35),
     inset 0 1px 0 rgba(192, 132, 252, 0.2);
   border-color: #ffffff;
+  /* Zoom sulla card intera (bordo compreso) invece che sull'immagine interna: niente più taglio */
+  transform: scale(1.03);
+  z-index: 5;
 }
 
 .cardImage {
@@ -141,7 +146,7 @@
 }
 
 .imageCard:hover .cardImage {
-  transform: scale(1.02);
+  transform: none;
 }
 
 .imageOverlay {
