@@ -1,18 +1,49 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
 import styles from './LightboxModal.module.css';
 import { withBase } from '../lib/withBase';
 
 export default function LightboxModal({ isOpen, image, title, alt, onClose }) {
+  const [isClosing, setIsClosing] = useState(false);
+  const closeTimer = useRef(null);
+
+  // Reset closing state every time the modal opens (or image changes)
+  useEffect(() => {
+    if (isOpen) {
+      setIsClosing(false);
+    }
+    return () => {
+      if (closeTimer.current) {
+        clearTimeout(closeTimer.current);
+      }
+    };
+  }, [isOpen, image]);
+
+  // Smooth exit: play the closing animation first, then really close
+  const handleRequestClose = () => {
+    if (isClosing) return;
+    setIsClosing(true);
+    closeTimer.current = setTimeout(() => {
+      onClose();
+    }, 240);
+  };
+
   if (!isOpen || !image) return null;
 
   return (
-    <div className={styles.backdrop} onClick={onClose}>
-      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+    <div
+      className={`${styles.backdrop}${isClosing ? ` ${styles.backdropClosing}` : ''}`}
+      onClick={handleRequestClose}
+    >
+      <div
+        className={`${styles.modalContent}${isClosing ? ` ${styles.modalClosing}` : ''}`}
+        onClick={(e) => e.stopPropagation()}
+      >
         <button
           type="button"
           className={styles.closeBtn}
-          onClick={onClose}
+          onClick={handleRequestClose}
           aria-label="Close Preview"
         >
           ✕
