@@ -113,7 +113,7 @@
   cursor: pointer;
   /* Dark plate face */
   background: linear-gradient(180deg, #1a0835 0%, #0d0420 100%);
-  border: 1px solid rgba(168, 85, 247, 0.3);
+  border: 2px solid #ffffff;
   /* Raised plate depth */
   box-shadow:
     0 6px 0 0 #060110,
@@ -130,7 +130,7 @@
     0 9px 0 0 #060110,
     0 14px 35px rgba(147, 51, 234, 0.35),
     inset 0 1px 0 rgba(192, 132, 252, 0.2);
-  border-color: rgba(192, 132, 252, 0.45);
+  border-color: #ffffff;
 }
 
 .cardImage {
