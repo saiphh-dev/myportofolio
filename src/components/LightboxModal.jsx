@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import styles from './LightboxModal.module.css';
+import Watermark from './Watermark';
 import { withBase } from '../lib/withBase';
 
 export default function LightboxModal({ isOpen, image, title, alt, originRect, onClose }) {
@@ -83,15 +84,7 @@ export default function LightboxModal({ isOpen, image, title, alt, originRect, o
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={withBase(image)} alt={alt || title} className={styles.fullImage} />
           {/* Tiled anti-theft watermark, like stock-photo sites */}
-          <div className={styles.watermarkLayer} aria-hidden="true">
-            {Array.from({ length: 6 }).map((_, row) => (
-              <div key={row} className={styles.watermarkRow}>
-                {Array.from({ length: 8 }).map((_, col) => (
-                  <span key={col}>Saiphh</span>
-                ))}
-              </div>
-            ))}
-          </div>
+          <Watermark />
         </div>
 
         <div className={styles.captionBar}>

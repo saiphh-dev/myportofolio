@@ -1,6 +1,7 @@
 'use client';
 
 import styles from './ShowcaseCarousel.module.css';
+import Watermark from './Watermark';
 import { withBase } from '../lib/withBase';
 
 export default function ShowcaseCarousel({ images = [], onSelectImage }) {
@@ -53,6 +54,7 @@ export default function ShowcaseCarousel({ images = [], onSelectImage }) {
                   className={styles.cardImage}
                   loading="lazy"
                 />
+                <Watermark rows={3} cols={4} small />
                 <div className={styles.imageOverlay}>
                   <span className={styles.imageTitle}>{item.title}</span>
                 </div>
@@ -93,6 +95,7 @@ export default function ShowcaseCarousel({ images = [], onSelectImage }) {
                   className={styles.cardImage}
                   loading="lazy"
                 />
+                <Watermark rows={3} cols={4} small />
                 <div className={styles.imageOverlay}>
                   <span className={styles.imageTitle}>{item.title}</span>
                 </div>
