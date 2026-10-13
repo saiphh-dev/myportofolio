@@ -35,6 +35,7 @@ export const profileData = {
     { id: 5, src: "/showcase/stud-style-convert-stand.png", title: "Stud Style Convert Stand", alt: "Stud Style Convert Stand" },
     { id: 6, src: "/showcase/stud-style-nature-background.png", title: "Stud Style Nature BackGround", alt: "Stud Style Nature BackGround" },
     { id: 7, src: "/showcase/stud-style-teleport-desert-biome.png", title: "Stud Style Teleport Desert Biome", alt: "Stud Style Teleport Desert Biome" },
+    { id: 8, src: "/showcase/stud-style-simulator-map.png", title: "Stud Style Simulator Map", alt: "Stud Style Simulator Map" },
   ],
 
   // 5 Alternating Portfolio Parts (Right / Left layout)
